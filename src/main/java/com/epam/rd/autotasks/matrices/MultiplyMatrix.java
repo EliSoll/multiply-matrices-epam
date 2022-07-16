@@ -3,10 +3,15 @@ import java.util.Arrays;
 
 public class MultiplyMatrix {
     public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
-
-        // Put your code here
-
-        return null;
+        int[][] matrixMultiply = new int[matrix1.length][matrix2[0].length];
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix2[0].length ; j++) {
+                for (int k = 0; k < matrix2.length; k++) {
+                    matrixMultiply[i][j] += matrix1[i][k]*matrix2[k][j];
+                }
+            }
+        }
+return matrixMultiply;
     }
 
     public static void main(String[] args) {
